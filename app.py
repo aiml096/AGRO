@@ -60,7 +60,7 @@ def main():
             if hasattr(model, "predict_proba"):
                 probs = model.predict_proba(features)[0]
                 classes = model.classes_
-                top_n = 3
+                top_n = 1
                 top_indices = probs.argsort()[-top_n:][::-1]
                 st.subheader(f"Top {top_n} Crop Recommendations:")
                 for idx in top_indices:
